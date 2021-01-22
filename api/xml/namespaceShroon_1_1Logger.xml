@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceShroon_1_1Logger" kind="namespace" language="C++">
+    <compoundname>Shroon::Logger</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceShroon_1_1Logger_1a5365a64c6344e75d54a0771ef99051ee" prot="public" static="yes" mutable="no">
+        <type>std::ostream *</type>
+        <definition>std::ostream* Shroon::Logger::s_Out</definition>
+        <argsstring></argsstring>
+        <name>s_Out</name>
+        <initializer>= &amp;std::cout</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="31" column="30" bodyfile="src/Logger.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceShroon_1_1Logger_1a854089766b7fe5580bae8658a9d84b07" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double Shroon::Logger::s_StartTime</definition>
+        <argsstring></argsstring>
+        <name>s_StartTime</name>
+        <initializer>= std::chrono::system_clock::now().time_since_epoch().count() / 1000000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="33" column="29" bodyfile="src/Logger.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceShroon_1_1Logger_1acd79aad2432bb3a5065af22154cccb54" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Shroon::Logger::GetTimestamp</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="54" column="28" bodyfile="src/Logger.cpp" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceShroon_1_1Logger_1a5bedca55a64a8d427291bc1e1b636de6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::SetOStream</definition>
+        <argsstring>(std::ostream &amp;out)</argsstring>
+        <name>SetOStream</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Sets the <computeroutput>std::ostream</computeroutput> to log to. It is <computeroutput>std::cout</computeroutput> by default for info, warnings and errors. Assertions are always written to <computeroutput>std::cerr</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <computeroutput>std::ostream &amp;</computeroutput> to which, all the logs will be written. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="61" column="14" bodyfile="src/Logger.cpp" bodystart="61" bodyend="64" declfile="src/Logger.hpp" declline="168" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogInfo</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogInfo</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Info</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Cyan)Info(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="66" column="14" bodyfile="src/Logger.cpp" bodystart="66" bodyend="78" declfile="src/Logger.hpp" declline="183" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogWarning</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogWarning</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Warning</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Yellow)Warning(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="80" column="14" bodyfile="src/Logger.cpp" bodystart="80" bodyend="92" declfile="src/Logger.hpp" declline="192" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogError</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="94" column="14" bodyfile="src/Logger.cpp" bodystart="94" bodyend="106" declfile="src/Logger.hpp" declline="201" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogFatalError</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogFatalError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput><linebreak/>
+</para>
+</blockquote>and performs a <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="108" column="14" bodyfile="src/Logger.cpp" bodystart="108" bodyend="120" declfile="src/Logger.hpp" declline="211" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FormatFunctions_1gaf2c3d4dd71579dedd7a7112a35e2d187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Shroon::Logger::FormatBase</definition>
+        <argsstring>(const std::string &amp;format, std::initializer_list&lt; std::string &gt; args)</argsstring>
+        <name>FormatBase</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>std::initializer_list&lt; std::string &gt;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Outputs a string with all the &quot;{}&quot; replaced with each element in <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <computeroutput>const std::string &amp;</computeroutput> which needs to be formatted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <computeroutput>std::initializer_list</computeroutput> containing format args.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <computeroutput>std::string</computeroutput> with all the &quot;{}&quot; replaced with each element in <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/StringFormat.cpp" line="22" column="21" bodyfile="src/StringFormat.cpp" bodystart="22" bodyend="25" declfile="src/StringFormat.hpp" declline="49" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FormatFunctions_1ga2d629dfea0f535722b83c4b578930ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Shroon::Logger::FormatBase</definition>
+        <argsstring>(std::string &amp;&amp;format, std::initializer_list&lt; std::string &gt; args)</argsstring>
+        <name>FormatBase</name>
+        <param>
+          <type>std::string &amp;&amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>std::initializer_list&lt; std::string &gt;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Outputs an <computeroutput>std::string</computeroutput> with all the &quot;{}&quot; replaced with each element in <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <computeroutput>std::string &amp;&amp;</computeroutput> which needs to be formatted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <computeroutput>std::initializer_list</computeroutput> containing format args.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <computeroutput>std::string</computeroutput> with all the &quot;{}&quot; replaced with each element in <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/StringFormat.cpp" line="27" column="21" bodyfile="src/StringFormat.cpp" bodystart="27" bodyend="212" declfile="src/StringFormat.hpp" declline="59" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FormatFunctions_1ga6357c147f5f92ed56459f2ca21c55af6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>IOSFlagTypes</declname>
+            <defname>IOSFlagTypes</defname>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string Shroon::Logger::ToString</definition>
+        <argsstring>(const Type &amp;t, IOSFlagTypes... flags)</argsstring>
+        <name>ToString</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>IOSFlagTypes...</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Converts variable of type <computeroutput>Type</computeroutput> to <computeroutput>std::string</computeroutput> using <computeroutput>operator&lt;&lt;</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of variable which will be converted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IOSFlagTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack of types of functors which will be passed to <computeroutput>operator&lt;&lt;</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to convert to string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags to pass to stream before variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <computeroutput>std::string</computeroutput> version of variable according to the <computeroutput>operator&lt;&lt;</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/StringFormat.hpp" line="73" column="28" bodyfile="src/StringFormat.hpp" bodystart="73" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string Shroon::Logger::Format</definition>
+        <argsstring>(const std::string &amp;format, Args... args)</argsstring>
+        <name>Format</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Outputs a string with all the &quot;{}&quot; replaced with positional <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- An <computeroutput>std::string</computeroutput> which needs to be formatted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Argument pack of variables containing format args.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>- An <computeroutput>std::string</computeroutput> with all the &quot;{}&quot; replaced with <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/StringFormat.hpp" line="90" column="21" bodyfile="src/StringFormat.hpp" bodystart="90" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FormatFunctions_1ga95382785ae66ce6f2fedd4d69ee00d27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string Shroon::Logger::Format</definition>
+        <argsstring>(std::string &amp;&amp;format, Args... args)</argsstring>
+        <name>Format</name>
+        <param>
+          <type>std::string &amp;&amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Outputs a string with all the &quot;{}&quot; replaced with positional <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <computeroutput>std::tring</computeroutput> which needs to be formatted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Argument pack of variables containing format args.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <computeroutput>std::string</computeroutput> with all the &quot;{}&quot; replaced with <computeroutput>args</computeroutput> inside <computeroutput>format</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/StringFormat.hpp" line="107" column="21" bodyfile="src/StringFormat.hpp" bodystart="107" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The namespace in which all the ShroonCPPLogger API other than macros exists. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Logger.cpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

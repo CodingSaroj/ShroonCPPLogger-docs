@@ -39,7 +39,7 @@ extensions = [
 ]
 
 breathe_projects = {
-    'Shroon C++ Logger': '../ShroonCPPLogger/docs/api/xml/'
+    'Shroon C++ Logger': '../api/xml/'
 }
 
 breathe_default_project = 'Shroon C++ Logger'
