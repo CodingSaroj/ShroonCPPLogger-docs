@@ -1,0 +1,3 @@
+[submodule "ShroonCPPLogger"]
+	path = ShroonCPPLogger
+	url = https://github.com/CodingSaroj/ShroonCPPLogger
