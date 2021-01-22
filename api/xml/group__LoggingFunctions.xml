@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__LoggingFunctions" kind="group">
+    <compoundname>LoggingFunctions</compoundname>
+    <title>LoggingFunctions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogInfo</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogInfo</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Info</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Cyan)Info(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="66" column="14" bodyfile="src/Logger.cpp" bodystart="66" bodyend="78" declfile="src/Logger.hpp" declline="183" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogWarning</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogWarning</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Warning</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Yellow)Warning(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="80" column="14" bodyfile="src/Logger.cpp" bodystart="80" bodyend="92" declfile="src/Logger.hpp" declline="192" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogError</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput>. </para>
+</blockquote></para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="94" column="14" bodyfile="src/Logger.cpp" bodystart="94" bodyend="106" declfile="src/Logger.hpp" declline="201" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Shroon::Logger::LogFatalError</definition>
+        <argsstring>(const std::string &amp;section, const std::string &amp;log)</argsstring>
+        <name>LogFatalError</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Logs data with level <computeroutput>Error</computeroutput> to the output stream in the format:<linebreak/>
+<blockquote><para><computeroutput>(Green)[&lt;time_since_app_started_in_ms&gt;](Bold|Red)Error(White)::&lt;section&gt;: &lt;log&gt;\n</computeroutput><linebreak/>
+</para>
+</blockquote>and performs a <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>section</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The section from where the log is comming. Example - &quot;Renderer::Rasterizer&quot;, &quot;Parser&quot; etc. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the log. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.cpp" line="108" column="14" bodyfile="src/Logger.cpp" bodystart="108" bodyend="120" declfile="src/Logger.hpp" declline="211" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This group consists of all the functions used for logging. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

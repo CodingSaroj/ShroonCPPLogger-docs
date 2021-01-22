@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__DebugLoggingMacros" kind="group">
+    <compoundname>DebugLoggingMacros</compoundname>
+    <title>DebugLoggingMacros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__DebugLoggingMacros_1ga082091eaa10a6b60b451943215478f33" prot="public" static="no">
+        <name>SHRN_INFO</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gacefeecc72630285763781fb2d19e9874" kindref="member">Shroon::Logger::LogInfo()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_INFO</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="58" column="17" bodyfile="src/Logger.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gac6e55d0d3fde8a23596097af946016bb" prot="public" static="no">
+        <name>SHRN_WARNING</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1gaf5693f0952969dc5df1f2f25f0828715" kindref="member">Shroon::Logger::LogWarning()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_WARNING</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="68" column="17" bodyfile="src/Logger.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gaa56b2b717f17ee88a3db73d61841c832" prot="public" static="no">
+        <name>SHRN_ERROR</name>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__));</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga723dc684cb72a391b5ede51d08ce228d" kindref="member">Shroon::Logger::LogError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="78" column="17" bodyfile="src/Logger.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__DebugLoggingMacros_1gad182fd7956a1a98ca160b082033f6d57" prot="public" static="no">
+        <name>SHRN_ASSERT</name>
+        <param><defname>cond</defname></param>
+        <param><defname>section</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>if (!(cond)) { <ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError</ref>(section, <ref refid="group__FormatFunctions_1gad02b243d822da3a7692c15daa8f7508f" kindref="member">Shroon::Logger::Format</ref>(__VA_ARGS__)); }</initializer>
+        <briefdescription>
+<para>Calls <computeroutput><ref refid="group__LoggingFunctions_1ga024813f717c47bb4675ec5885be6456d" kindref="member">Shroon::Logger::LogFatalError()</ref></computeroutput> when macro <computeroutput>NDEBUG</computeroutput> is not defined i.e. in debug mode and when <computeroutput>SHRN_LOG_LEVEL &gt;= SHRN_LOG_LEVEL_ERROR</computeroutput> otherwise calls <computeroutput><ref refid="Logger_8hpp_1a42d23c919dac4b9c2ef85648fcd22c31" kindref="member">SHRN_DEBUG_BREAK()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Logger.hpp" line="84" column="17" bodyfile="src/Logger.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This group consists of all the macros used for logging only in debug mode. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
